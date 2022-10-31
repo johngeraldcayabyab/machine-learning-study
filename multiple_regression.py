@@ -11,7 +11,6 @@ regr.fit(X, y)
 
 predictedC02 = regr.predict([[2300, 1300]])
 
-
 print(regr.coef_)
 
 print(predictedC02)
