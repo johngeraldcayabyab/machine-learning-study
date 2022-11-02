@@ -10,6 +10,6 @@ df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S').dt.strftime(
 X = df['Date']
 y = df['Close']
 
-plt.scatter(X, y)
+plt.plot(df['Close'])
 
 plt.show()
