@@ -18,15 +18,22 @@ df = df.set_index(df['Date'])
 
 close = df['Close']
 close_50_ma = close.rolling(window=50).mean()
+close_150_ma = close.rolling(window=150).mean()
+close_200_ma = close.rolling(window=200).mean()
+
 plt.plot(close, 'k-', label='Original')
-plt.plot(close_50_ma, 'r-', label='50 Day MA')
+plt.plot(close_50_ma, 'g-', label='50 Day MA')
+plt.plot(close_150_ma, 'r-', label='150 Day MA')
+plt.plot(close_200_ma, 'b-', label='200 Day MA')
 
 plt.ylabel('Price')
 plt.xlabel('Date')
 
 plt.grid(linestyle=':')
 
-plt.fill_between(close_50_ma.index, 0, close_50_ma, color='r', alpha=0.1)
+plt.fill_between(close_50_ma.index, 0, close_50_ma, color='g', alpha=0.1)
+plt.fill_between(close_150_ma.index, 0, close_150_ma, color='r', alpha=0.1)
+plt.fill_between(close_200_ma.index, 0, close_150_ma, color='b', alpha=0.1)
 
 plt.legend(loc='upper left')
 
