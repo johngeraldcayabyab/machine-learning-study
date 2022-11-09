@@ -1,18 +1,33 @@
-import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
-# data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# window = 2
-# average_data = []
-#
-# for index in range(len(data) - window + 1):
-#     windowRange = data[index:index + window]  # list slice
-#     rangeMean = np.mean(windowRange)
-#     average_data.append(rangeMean)
+df = pd.read_csv('../csv/ACEN-Historical-Data.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+df['Close'] = 0
 
-x = np.linspace(0, 10, 50)
-y = np.sin(x)
-window = 5
-average_y = []
-for ind in range(len(y) - window + 1):
-    average_y.append(np.mean(y[ind:ind + window]))
+for i in range(0, len(df)):
+    previousRow = i - 1
+    if previousRow in df.index:
+        df.loc[i, 'Close'] = df.loc[previousRow, 'Open']
+    else:
+        df.loc[i, 'Close'] = 0
+
+df = df.sort_values(by='Date')
+
+df = df.set_index(df['Date'])
+
+close = df['Close']
+close_50_ma = close.rolling(window=50).mean()
+plt.plot(close, 'k-', label='Original')
+plt.plot(close_50_ma, 'r-', label='50 Day MA')
+
+plt.ylabel('Price')
+plt.xlabel('Date')
+
+plt.grid(linestyle=':')
+
+plt.fill_between(close_50_ma.index, 0, close_50_ma, color='r', alpha=0.1)
+
+plt.legend(loc='upper left')
+
+plt.show()
