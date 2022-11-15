@@ -23,9 +23,22 @@ dtree = dtree.fit(X.values, y)
 # If you want to see the decision tree, then print this
 tree.plot_tree(dtree, feature_names=features)
 
-prediction = dtree.predict([[40, 10, 7, 1]])
+# prediction = dtree.predict([[40, 10, 7, 1]])
 
-print(prediction)
-# print(dtree.predict([[40, 10, 7, 1]]))
+print(dtree.predict([[40, 10, 7, 1]]))
+print(dtree.predict([[40, 10, 6, 1]]))
+
+# [0]
+# [1] means 'GO'
+# [0] means 'NO'
+
+# I have also noticed that decision tree value changes if you try re-running the program/script many times
+# Maybe because it's a decision tree and it needs more data to have the confidence level it needs
 
 # print(X)
+
+
+#Different Results
+#You will see that the Decision Tree gives you different results if you run it enough times, even if you feed it with the same data.
+
+#That is because the Decision Tree does not give us a 100% certain answer. It is based on the probability of an outcome, and the answer will vary.
