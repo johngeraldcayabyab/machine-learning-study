@@ -5,6 +5,7 @@ Learning basic machine learning using python
 <ul>
 <li>Read Financial statements</li>
 <li>Read company disclosure</li>
+<li>Can you use binomial distribution to calculate the probability in the bullish market if price goes up tomorrow or not?</li>
 </ul>
 
 <h3>Sites</h3>
