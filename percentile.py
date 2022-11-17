@@ -18,3 +18,4 @@ print(numpy.percentile(scores, 20))
 #Explanation
 #1) Depends on context. 95th percentile in school is a good thing. 95th percentile in weight is bad. Saying x percentile means you are above that percent of people in whatever is being measured. In academics it means you have higher marks than x percent of people. In weight it means you weigh more than x percent of people.
 #2) When you say "Xth percentile" it means that you are above X% of the group. So for example if a baby is at the 90th weight percentile, it means they weigh more than 90% of the babies of the same age.
+#3) Also for percentile, you have to rearrange the numbers first from in order
