@@ -54,3 +54,6 @@ Specificity_recall = metrics.recall_score(actual, predicted, pos_label=0)
 
 F1_score = metrics.f1_score(actual, predicted)
 print(F1_score)
+
+# for more resources
+# https://towardsdatascience.com/baffling-concept-of-true-positive-and-true-negative-bffbc340f107
