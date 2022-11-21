@@ -8,8 +8,9 @@ y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
 logr = linear_model.LogisticRegression()
 logr.fit(X, y)
 
-predicted = logr.predict(numpy.array([1.46]).reshape(-1, 1))
+predicted = logr.predict(numpy.array([3.46]).reshape(-1, 1))
 
+#If you want a yes or no answer then use this.
 print(predicted)
 
 # Odds and Coefficient
@@ -20,7 +21,6 @@ print(odds)
 
 
 # Probability since were only checking binomial values
-
 def logit2prob(logr, x):
     log_odds = logr.coef_ * x + logr.intercept_
     odds = numpy.exp(log_odds)
