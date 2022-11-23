@@ -3,6 +3,10 @@ from sklearn.cluster import KMeans
 
 # https://www.linkedin.com/pulse/k-means-clustering-its-real-world-use-case-pratik-kohad-1c/
 
+# the elbow method may not be the most efficient method of finding the K
+# thats where the Silhouette score method comes in
+# https://towardsdatascience.com/elbow-method-is-not-sufficient-to-find-best-k-in-k-means-clustering-fc820da0631d
+
 x = [4, 5, 10, 4, 3, 11, 14, 6, 10, 12]
 y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
 
