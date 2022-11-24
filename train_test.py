@@ -17,8 +17,6 @@ mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
 
 r2 = r2_score(test_y, mymodel(test_x))
 
-
-
 print(r2)
 
 print(mymodel(5))
@@ -27,3 +25,8 @@ print(mymodel(5))
 
 # plt.scatter(test_x, test_y)
 # plt.show()
+
+
+# read more
+# https://data-flair.training/blogs/train-test-set-in-python-ml/
+# https://towardsdatascience.com/how-to-split-a-dataset-into-training-and-testing-sets-b146b1649830
