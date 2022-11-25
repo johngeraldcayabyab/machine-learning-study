@@ -6,8 +6,12 @@ from sklearn.linear_model import LogisticRegression
 
 iris = datasets.load_iris()
 
+# print(iris.data)
+
 X = iris['data']
 y = iris['target']
+
+print(y)
 
 logit = LogisticRegression(max_iter=10000)
 
