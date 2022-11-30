@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 
 scale = StandardScaler()
 
-df = pandas.read_csv('./csv/data_scale.csv')
+df = pandas.read_csv('../csv/data_scale.csv')
 
 X = df[['Weight', 'Volume']]
 y = df['CO2']

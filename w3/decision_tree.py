@@ -3,7 +3,7 @@ from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
 
-df = pandas.read_csv('./csv/people.csv')
+df = pandas.read_csv('../csv/people.csv')
 
 nationalityMap = {'UK': 0, 'USA': 1, 'N': 2}
 df['Nationality'] = df['Nationality'].map(nationalityMap)

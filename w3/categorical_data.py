@@ -7,7 +7,7 @@ from sklearn import linear_model
 # This is why we use one hot encoder to perform “binarization” of the category and include it as a feature to train the model.
 # source of one hot encoding https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
 
-cars = pd.read_csv('./csv/data.csv')
+cars = pd.read_csv('../csv/data.csv')
 # print(cars.to_string())
 
 # one hot encoding
