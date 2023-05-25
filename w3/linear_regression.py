@@ -16,3 +16,5 @@ mymodel = list(map(myfunc, x))
 plt.scatter(x, y)
 plt.plot(x, mymodel)
 plt.show()
+
+print(r)
