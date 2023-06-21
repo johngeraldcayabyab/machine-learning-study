@@ -7,7 +7,7 @@ cube = gfx.Mesh(
 
 
 def animate():
-    rot = gfx.linalg.Quaternion().set_from_euler(gfx.linalg.Euler(0.005, 0.1))
+    rot = gfx.linalg.Quaternion().set_from_euler(gfx.linalg.Euler(0.110, -0.1))
     cube.rotation.multiply(rot)
 
 disp = gfx.Display()
