@@ -67,32 +67,13 @@ def get_attribute(attribute, genes):
 
 def attribute_breakdown(genome):
     attribute_chunked = [genome[i:i + 16] for i in range(0, len(genome), 16)]
-    base_color = get_attribute('base_color',[attribute_chunked[0][i:i + 4] for i in range(0, len(attribute_chunked[0]), 4)])
-    highlight_color = get_attribute('highlight_color',[attribute_chunked[1][i:i + 4] for i in range(0, len(attribute_chunked[1]), 4)])
-    accent_color = get_attribute('accent_color',[attribute_chunked[2][i:i + 4] for i in range(0, len(attribute_chunked[2]), 4)])
-    mouth = get_attribute('mouth', [attribute_chunked[3][i:i + 4] for i in range(0, len(attribute_chunked[3]), 4)])
-    fur = get_attribute('fur', [attribute_chunked[4][i:i + 4] for i in range(0, len(attribute_chunked[4]), 4)])
-    pattern = get_attribute('pattern', [attribute_chunked[5][i:i + 4] for i in range(0, len(attribute_chunked[5]), 4)])
-    eye_shape = get_attribute('eye_shape',[attribute_chunked[6][i:i + 4] for i in range(0, len(attribute_chunked[6]), 4)])
-    eye_color = get_attribute('eye_color',[attribute_chunked[7][i:i + 4] for i in range(0, len(attribute_chunked[7]), 4)])
-    tail = get_attribute('tail', [attribute_chunked[8][i:i + 4] for i in range(0, len(attribute_chunked[8]), 4)])
-    hair_style = get_attribute('hair_style',[attribute_chunked[9][i:i + 4] for i in range(0, len(attribute_chunked[9]), 4)])
-    body_shape = get_attribute('body_shape',[attribute_chunked[10][i:i + 4] for i in range(0, len(attribute_chunked[10]), 4)])
-    head_shape = get_attribute('head_shape',[attribute_chunked[11][i:i + 4] for i in range(0, len(attribute_chunked[11]), 4)])
-    return [
-        base_color,
-        highlight_color,
-        accent_color,
-        mouth,
-        fur,
-        pattern,
-        eye_shape,
-        eye_color,
-        tail,
-        hair_style,
-        body_shape,
-        head_shape
-    ]
+    phenotypes = {}
+    counter = 0
+    for attribute, genes in attributes.items():
+        chunked = [attribute_chunked[counter][i:i + 4] for i in range(0, len(attribute_chunked[counter]), 4)]
+        phenotypes[attribute] = get_attribute(attribute, chunked)
+        counter += 1
+    return phenotypes
 
 
 kitty_1 = {
