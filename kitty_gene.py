@@ -98,5 +98,5 @@ kitty_2 = {
     'generation': 1
 }
 
-# print(attribute_breakdown(kitty_1['genome']))
+print(attribute_breakdown(kitty_1['genome']))
 print(attribute_breakdown(kitty_2['genome']))
