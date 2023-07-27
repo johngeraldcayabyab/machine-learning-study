@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Kitty:
     def __init__(
             self,
@@ -27,5 +26,3 @@ class Kitty:
         self.cooldown_index = cooldown_index,
         # The generation of the cat. The first kitties produced were generation 0.
         self.generation = generation
-
-
