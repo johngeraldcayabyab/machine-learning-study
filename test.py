@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Kitty:
     def __init__(
             self,
@@ -28,6 +29,3 @@ class Kitty:
         self.generation = generation
 
 
-# class KittyBreeding:
-#     def breed_with(self, matron_id: bytes, sire_id=123):
-#
